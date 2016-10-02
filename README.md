@@ -4,7 +4,7 @@
 
 ## Overview
 
-Romochka is a tool for fast playing with bemhtml and bemjson in sandbox (https://bem.github.io/bem-xjst). Send to it bemhtml or bemjson and it'll return link to sandbox. Or, if you doesn't know what we are talking about, please visit https://ru.bem.info/ and learn BEM!
+Romochka is a tool for fast playing with bemhtml and bemjson in sandbox (https://bem.github.io/bem-xjst). Send to it bemhtml or bemjson and it'll return link to sandbox. Or, if you doesn't know what we are talking about, please visit https://en.bem.info/ and learn BEM!
 
 ## Install
 

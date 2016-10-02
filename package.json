@@ -1,0 +1,31 @@
+{
+  "name": "romochka_bembot",
+  "version": "1.0.0",
+  "description": "Romochka is a tool for fast playing with bemhtml and bemjson in sandbox.",
+  "main": "romochka_bembot",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node romochka_bembot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksugr/romochka_bembot.git"
+  },
+  "keywords": [
+    "bem",
+    "telegrambot",
+    "bot",
+    "sandbox"
+  ],
+  "author": "Roman Ponomarev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maksugr/romochka_bembot/issues"
+  },
+  "homepage": "https://github.com/maksugr/romochka_bembot#readme",
+  "dependencies": {
+    "lodash": "^4.16.2",
+    "node-telegram-bot-api": "^0.23.3",
+    "urlencode": "^1.1.0"
+  }
+}

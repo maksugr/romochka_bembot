@@ -1,6 +1,6 @@
 # Romochka_bemBot
 
-![jpg](https://github.com/maksugr/romochka_bembot/blob/master/romochka.jpg)
+![jpg](https://github.com/maksugr/romochka_bembot/blob/master/romochka-pic.jpg)
 
 ## Overview
 

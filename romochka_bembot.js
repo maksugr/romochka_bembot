@@ -5,7 +5,7 @@ var urlencode = require('urlencode');
 
 const TelegramBot = require('node-telegram-bot-api');
 const config = require('./config');
-const token = config.token;
+const token = process.env.TOKEN || config.token;
 
 const romochka_bemBot = new TelegramBot(token, { polling: true });
 

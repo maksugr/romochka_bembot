@@ -1,11 +1,11 @@
 {
   "name": "romochka_bembot",
   "version": "1.0.0",
-  "description": "Romochka is a tool for fast playing with bemhtml and bemjson in sandbox.",
-  "main": "romochka_bembot",
+  "description": "Romochka is a Telegram Bot for fast playing with bemhtml and bemjson in sandbox.",
+  "main": "index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node romochka_bembot"
+    "start": "node ."
   },
   "repository": {
     "type": "git",

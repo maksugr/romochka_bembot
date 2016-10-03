@@ -9,6 +9,8 @@ const token = process.env.TOKEN || config.token;
 
 const romochka_bemBot = new TelegramBot(token, { polling: true });
 
+console.log('Romochka starts talking with world...');
+
 /**
  * Check the bemhtml
  *

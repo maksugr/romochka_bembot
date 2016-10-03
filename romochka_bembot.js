@@ -39,7 +39,7 @@ const isBemjson = text => {
  * @returns {String} Link
  */
 const generateBemhtmlLink = bemhtml => {
-	return `https://bem.github.io/bem-xjst/?bemhtml=${urlencode(bemhtml)}&bemjson=`;
+	return `Start playing! Your link is: https://bem.github.io/bem-xjst/?bemhtml=${urlencode(bemhtml)}&bemjson=%20 !`;
 };
 
 /**
@@ -50,8 +50,9 @@ const generateBemhtmlLink = bemhtml => {
  * @returns {String} Link
  */
 const generateBemjsonLink = bemjson => {
-	const wrappedBemjson = `(${bemjson});`;
-	return `https://bem.github.io/bem-xjst/?bemhtml=&bemjson=${urlencode(wrappedBemjson)}`;
+	const trimedBemjson = _.trimEnd(bemjson, ';');
+	const wrappedBemjson = `(${trimedBemjson});`;
+	return `Start playing! Your link is: https://bem.github.io/bem-xjst/?bemhtml=%20&bemjson=${urlencode(wrappedBemjson)} !`;
 };
 
 /**

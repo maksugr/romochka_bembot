@@ -3,7 +3,7 @@ const packageInfo = require('./package.json');
 
 const app = express();
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
 	res.json({ version: packageInfo.version });
 });
 

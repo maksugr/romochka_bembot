@@ -4,7 +4,7 @@
 
 ## Overview
 
-Romochka is a Telegram Bot for fast playing with bemhtml and bemjson in sandbox (https://bem.github.io/bem-xjst). Send to it bemhtml or bemjson and it'll return link to sandbox. Or, if you doesn't know what we are talking about, please visit https://en.bem.info/ and learn BEM!
+Romochka is a Telegram Bot for fast playing with bemhtml and bemjson in sandbox (https://bem.github.io/bem-xjst). Send to it bemhtml or bemjson and it'll return link to sandbox. Also without leaving Telegram Romochka generates for you deps from bemhtml. Or, if you doesn't know what we are talking about, please visit https://en.bem.info/ and learn BEM!
 
 ## Requirements
 
@@ -27,3 +27,7 @@ After all preparation open your Terminal App and start playing!
 ``` bash
 # npm start
 ```
+
+## Relative link
+
+http://telegram.me/Romochka_bemBot

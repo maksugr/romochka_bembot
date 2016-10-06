@@ -1,7 +1,8 @@
 'use strict';
 
 const _ = require('lodash');
-var urlencode = require('urlencode');
+const urlencode = require('urlencode');
+const depsParser = require('bem-deps-parser');
 
 const TelegramBot = require('node-telegram-bot-api');
 const config = require('./config');
@@ -41,7 +42,10 @@ const isBemjson = text => {
  * @returns {String} Link
  */
 const generateBemhtmlLink = bemhtml => {
-	return `Start playing! Your link is: https://bem.github.io/bem-xjst/?bemhtml=${urlencode(bemhtml)}&bemjson=%20 !`;
+	const deps = depsParser.parse(bemhtml);
+	const resultDeps = deps.resultDeps !== '[]' ? ` and deps: <pre>${deps.result}</pre>` : `!`;
+
+	return `It's done! Your <a href="https://bem.github.io/bem-xjst/?bemhtml=${urlencode(bemhtml)}&bemjson=%20">link</a>${resultDeps}`;
 };
 
 /**
@@ -54,7 +58,7 @@ const generateBemhtmlLink = bemhtml => {
 const generateBemjsonLink = bemjson => {
 	const trimedBemjson = _.trimEnd(bemjson, ';');
 	const wrappedBemjson = `(${trimedBemjson});`;
-	return `Start playing! Your link is: https://bem.github.io/bem-xjst/?bemhtml=%20&bemjson=${urlencode(wrappedBemjson)} !`;
+	return `It's done! Your <a href="https://bem.github.io/bem-xjst/?bemhtml=%20&bemjson=${urlencode(wrappedBemjson)}">link</a>!`;
 };
 
 /**
@@ -98,7 +102,7 @@ romochka_bemBot.on('text', msg => {
 	const link = generateLink(msg.text);
 	const answer = generateAnswer(link);
 
-	romochka_bemBot.sendMessage(chatId, answer);
+	romochka_bemBot.sendMessage(chatId, answer, { parse_mode: 'HTML' });
 });
 
 

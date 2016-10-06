@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/maksugr/romochka_bembot#readme",
   "dependencies": {
+    "bem-deps-parser": "maksugr/bem-deps-parser",
     "lodash": "^4.16.2",
     "node-telegram-bot-api": "^0.23.3",
     "urlencode": "^1.1.0"

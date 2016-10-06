@@ -1,6 +1,6 @@
 {
   "name": "romochka_bembot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Romochka is a Telegram Bot for fast playing with bemhtml and bemjson in sandbox.",
   "main": "index",
   "scripts": {

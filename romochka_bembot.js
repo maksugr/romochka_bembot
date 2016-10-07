@@ -1,10 +1,10 @@
 'use strict';
 
-const _ = require('lodash');
 const urlencode = require('urlencode');
 const depsParser = require('bem-deps-parser');
-
 const TelegramBot = require('node-telegram-bot-api');
+const trimEnd = require('lodash.trimend');
+
 const config = require('./config');
 const token = process.env.TOKEN || config.token;
 
@@ -20,7 +20,7 @@ console.log('Romochka starts talking with world...');
  * @returns {Boolean}
  */
 const isBemhtml = text => {
-	return _.startsWith(text, 'block');
+	return text.startsWith('block');
 };
 
 /**
@@ -31,7 +31,7 @@ const isBemhtml = text => {
  * @returns {Boolean}
  */
 const isBemjson = text => {
-	return _.startsWith(text, '{') || _.startsWith(text, '[');
+	return text.startsWith('{') || text.startsWith('[');
 };
 
 /**
@@ -56,11 +56,10 @@ const generateBemhtmlLink = bemhtml => {
  * @returns {String} Link
  */
 const generateBemjsonLink = bemjson => {
-	const trimedBemjson = _.trimEnd(bemjson, ';');
+	const trimedBemjson = bemjson.trimEnd('; ');
 	const wrappedBemjson = `(${trimedBemjson});`;
 	return `It's done! Your <a href="https://bem.github.io/bem-xjst/?bemhtml=%20&bemjson=${urlencode(wrappedBemjson)}">link</a>!`;
 };
-
 /**
  * Generate link
  *

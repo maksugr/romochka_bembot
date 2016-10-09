@@ -56,7 +56,7 @@ const generateBemhtmlLink = bemhtml => {
  * @returns {String} Link
  */
 const generateBemjsonLink = bemjson => {
-	const trimedBemjson = bemjson.trimEnd('; ');
+	const trimedBemjson = trimEnd(bemjson, '; ');
 	const wrappedBemjson = `(${trimedBemjson});`;
 	return `It's done! Your <a href="https://bem.github.io/bem-xjst/?bemhtml=%20&bemjson=${urlencode(wrappedBemjson)}">link</a>!`;
 };

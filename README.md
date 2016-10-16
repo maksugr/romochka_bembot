@@ -13,7 +13,7 @@ node.js >= 4.5.0
 ## Install
 
 ``` bash
-# git clone git@github.com:maksugr/sublime-bem-create.git romochka_bemBot
+# git clone git@github.com:maksugr/romochka_bembot.git romochka_bemBot
 # cd romochka_bemBot
 # npm i
 ```
